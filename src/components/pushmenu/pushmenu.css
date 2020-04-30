@@ -1,0 +1,64 @@
+.wrapper {
+    display: flex;
+    /*margin-bottom: 200px;*/
+    width: 70px;
+    height: 1024px;
+
+    transition: margin .3s;
+    margin: 0 0 0 -70px;
+    /*margin-top: 20px;*/
+  background: rgba(34, 34, 34, 0.7);;
+    /*border-right: 1px solid #ccc;*/
+    /*border-top: 1px solid #ccc;*/
+    border-top-right-radius: 20px;
+}
+
+.wrapper.is-nav-open {
+    margin-left: 0;
+    width: 5%;
+    /*margin-top: 0px;*/
+    background: rgba(34, 34, 34, 0.7);
+}
+
+.nav {
+    position: relative;
+    width: 280px;
+    height: 100%;
+    padding: 20px;
+
+}
+.nav__icon {
+    position: absolute;
+    /*margin-top: -1px;*/
+    /*top: 0px;*/
+    z-index: 1;
+    margin-top: 22px;
+    /*margin-right: 1340px;*/
+    right: 30px;
+    left: 22px;
+
+    /*padding: 22px;*/
+    /*font-size: 20px;*/
+    /*width: 1.5%;*/
+    /*height: 2.5%;*/
+    /*cursor: pointer;*/
+    /*transition: color .3s;*/
+}
+
+.nav__icon:hover {
+
+    /*color: aqua;*/
+    /*color: #5eb2ff;*/
+    /*background-color: #4F3F84;*/
+}
+/*.nav__icon {*/
+
+
+/*}*/
+/*.Nav__body {*/
+/*    */
+/*}*/
+
+.But1 {
+    margin-top: 100px;
+}

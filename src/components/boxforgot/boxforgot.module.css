@@ -1,0 +1,30 @@
+.Title1 {
+    font-family: Helvetica Neue;
+    margin-top: 30px;
+    /*margin-bottom: 452px;*/
+    font-style: normal;
+    font-weight: 200;
+    font-size: 26px;
+    line-height: 31px;
+    /*display: flex;*/
+    align-items: center;
+    text-align: center;
+    color: #E1D3C1;
+}
+
+.Boxforgot {
+    /*margin-top: 30px;*/
+    border-radius: 20px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    height: 420px;
+    width: 540px;
+    margin-right: 450px;
+    margin-left: 450px;
+    margin-top: 289px;
+    /*margin-bottom: 290px;*/
+    background: rgba(34, 34, 34, 0.7);
+}
