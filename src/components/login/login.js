@@ -7,34 +7,44 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import {saveToken,giveToken} from "../../supportfunction";
 import {Field} from "../input/input";
 import Logo from "../pictures/Logo for use.svg";
 import Box from "../box/box";
 import Auth from "../api/api";
+
+
 
 function SendEmailOrPhone(props) {
     return (
         <div>
 
             <div className={classes.Inputs1}>
-
+                <form>
+                    <label>
                 <input className={classes.Login1}
-                       type="text"
+
+                       // type="email"
                        name="phoneOrMail"
                     value={props.phoneOrMail}
                        placeholder="Email или телефон"
                         onChange={(e) => props.onPhoneOrMailChangeHandler(e)}
+                       // required pattern="a-z"
+
                        />
+                    </label>
                 <input className={classes.Login2}
-                       type="text"
+                       // type="password"
                        name="password"
                     value={props.password}
                        placeholder="Пароль"
                     onChange={(e) => props.onPasswordChangeHandler(e)}
+                       // required pattern="a-z"
+                       minLength="8"
                 />
                 <button className={classes.Button2} type="submit" onClick={props.submitHandler}>Активировать
                 </button>
-
+                </form>
             </div>
         </div>
     )
@@ -50,33 +60,35 @@ class Login extends Component {
         };
     }
 
-    sendEmailOrPhone = () => {
-        console.log("sendEmailOrPhone");
+
+// var email =/^[а-яА-Яa-zA-Z0-9_\.\-]+@[а-яА-Яa-zA-Z0-9\-]+\.[а-яА-Яa-zA-Z\-\.]+$/;
+
+    sendEmailOrPhone = async () => {
         this.formData = new FormData();
         this.formData.append("phone_or_mail", this.state.phoneOrMail);
         this.formData.append("password", this.state.password);
 
 
-        // console.log(this.formData);
-        // console.log(this.state.phone_or_mail)
-        fetch("https://api.iq.academy/api/account/login", {
-            method: "POST",
-            // mode: 'no-cors',
-            // mode: 'cors',
-            headers: {
-                // "Content-Type": "multipart/form-data"
-            },
-            body: this.formData,
-        }).then((Data) => {
+        // async
+        // componentDidMount()
+        {
+            const requestOptions = {
+                method: 'POST',
+                headers: {
+                    // "Content-Type": "multipart/form-data"
+                },
+                body: this.formData
+            };
+            const response = await fetch('https://api.iq.academy/api/account/login', requestOptions);
+            const data = await response.json();
+            saveToken(data.token);
+            console.log(data.token);
+            this.props.history.push("/editprofile")
+
+        }
+    }
 
 
-            this.props.history.push("/registration")
-            console.log(this.formData);
-            localStorage.setItem('token', "ff");
-            console.log(localStorage);
-            // this.setState({ "authStep": 1 });
-        });
-    };
 
     handlePasswordChange = (e) => {
         this.setState({ password: e.target.value });
@@ -100,23 +112,10 @@ class Login extends Component {
 
                 <div className={classes.Div1}>Нет аккаунта?
                     <nav>
+                        {/*<Link to="/registration"><div>Регистрация</div></Link>*/}
                         <Link to="/registration"><div>Регистрация</div></Link>
                     </nav>
-            {/*        <Router>*/}
-            {/*            <div>*/}
-            {/*                <nav>*/}
-            {/*                    <link to="/registration">11</link>*/}
-            {/*                </nav>*/}
-            {/*                <Switch>*/}
-            {/*                    <Route path="/registration">*/}
-            {/*                        <Logo/>*/}
 
-            {/*                        <Box/>*/}
-            {/*                        <Auth/>*/}
-            {/*                    </Route>*/}
-            {/*                </Switch>*/}
-            {/*            </div>*/}
-            {/*</Router>*/}
 
                 </div>
             </div>
@@ -124,3 +123,4 @@ class Login extends Component {
     }
 }
     export default withRouter(Login);
+// export default Login;

@@ -3,7 +3,9 @@ import classes from "./boxprofile.module.css"
 // import Api from "../api/api";
 
 import { withRouter } from 'react-router-dom';
+// import Profile from "../profile/profile";
 import Profile from "../profile/profile";
+
 
 // import Form from "../regi/regi";
 

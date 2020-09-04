@@ -36,6 +36,7 @@
     /*margin-right: 1340px;*/
     right: 30px;
     left: 22px;
+    /*margin-bottom: 200%;*/
 
     /*padding: 22px;*/
     /*font-size: 20px;*/
@@ -60,5 +61,23 @@
 /*}*/
 
 .But1 {
-    margin-top: 100px;
+        position: absolute;
+    /*z-index: 1;*/
+    margin-top: 100%;
 }
+    .But2 {
+    position: absolute;
+    /*    z-index: 1;*/
+        margin-top: 200%;
+    }
+    .But3 {
+        position: absolute;
+        /*z-index: 1;*/
+        margin-top: 300%;
+    }
+    .But4 {
+        position: absolute;
+        /*z-index: 1;*/
+        margin-top: 400%;
+    }
+

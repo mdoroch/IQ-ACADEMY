@@ -24,9 +24,11 @@ function SendCodeAndPassword(props) {
                     value={props.code}
                        placeholder="Код"
                     onChange={(e) => props.onCodeChangeHandler(e)}
+                       minLength="4"
+                       maxLength="4"
                 />
                 <input className={classes.Input4}
-                    type="text"
+                    type="password"
                     name="password"
                     value={props.password}
                        placeholder="Пароль"
@@ -110,7 +112,7 @@ class Auth extends Component {
         });
     };
 
-    sendCodeAndPassword = () => {
+     sendCodeAndPassword = () => {
         // this.props.history.push("/login");
         this.formData = new FormData();
         this.formData.append("phone_or_mail", this.state.phoneOrMail);
@@ -128,8 +130,11 @@ class Auth extends Component {
             },
             body: this.formData,
         }).then((Data) => {
+
             this.props.history.push("/login")
             console.log(this.formData);
+
+
         });
     };
 

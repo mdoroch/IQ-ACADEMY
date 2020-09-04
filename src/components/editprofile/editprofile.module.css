@@ -19,10 +19,10 @@
 }
 .P1{
     position: absolute;
-    margin-left:37.5%;
+margin-left:37.5%;
     /*margin-right: 50%;*/
     margin-top: 30px    ;
-    height: 41px;
+     height: 41px;
     width: 980px;
     /*margin-left: -20%;*/
 
@@ -38,7 +38,7 @@
     color: #E1D3C1;
 }
 
-.Input2 {
+.Input12 {
     position: absolute;
     width: 54%;
     height: 7.7%;
@@ -57,6 +57,48 @@
 
     background-color: rgba(34, 34, 34, 0);
     color: #E1D3C1;
+}
+.Input13 {
+    position: absolute;
+    width: 54%;
+    height: 7.7%;
+    margin-left: 213px;
+    margin-top: 233px;
+    border: none;
+    outline:none;
+    border-bottom: 2px solid #4F3F84;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+
+    background-color: rgba(34, 34, 34, 0);
+    color: #E1D3C1;
+}
+.Input2 {
+    position: absolute;
+    width: 54%;
+    height: 7.7%;
+    margin-left: 213px;
+    margin-top: 295px;
+    border: none;
+    outline:none;
+    border-bottom: 2px solid #4F3F84;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+
+    background-color: rgba(34, 34, 34, 0);
+    color: #E1D3C1;
+
+
 }
 .Sex1 {
     position: absolute;
@@ -121,6 +163,13 @@
 
     color: #E1D3C1;
 }
+.Button1:hover{
+    background: #5C34FA;
+}
+.Button1:active{
+    background: #504D49;
+    transition: color 5s
+}
 .Birthday {
     position: absolute;
     height: 50px;
@@ -139,6 +188,7 @@
 }
 
 .Input3 {
+
     position: absolute;
     margin-left: 213px;
     margin-top: 407px;
@@ -154,4 +204,15 @@
 
 
     color: rgba(225, 211, 193, 0.5);
+}
+.Circle {
+    position: absolute;
+    margin-top: 13%;
+    margin-left: 5%;
+}
+.Photo {
+    position: absolute;
+    margin-top: 18.7%;
+    margin-left: 9.7%;
+    color: #E1D3C1;
 }

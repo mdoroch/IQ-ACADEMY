@@ -17,8 +17,14 @@ import Boxforgot from "./components/boxforgot/boxforgot";
 import Push from "./components/pushmenu/pushmenu";
 import ExampleCss from "./components/pushmenu/pushmenu";
 import Boxprofile from "./components/boxprofile/boxprofile";
-
+// import Editprofile from "./components/editprofile/editprofile";
+import Boxeditprofile from "./components/boxeditprofile/boxeditprofile";
+import Cropprofile from "./components/addphoto/cropprofile/cropprofile";
+import GateKeeper from "./components/empty";
+import Form from "../src/components/empty"
 // import Sidebar from "./components/pushmenu/pushmenu'
+import MapContainer from "./components/maps /maps";
+import Nocoursepage from "./components/nocoursepage/nocoursepage";
 
 class App extends React.Component {
     render() {
@@ -28,49 +34,49 @@ class App extends React.Component {
                  <Router>
                      <div>
 
-                         {/*<nav>*/}
-                         {/*    <ul>*/}
-                         {/*        <li>*/}
-                         {/*            <Link to="/">Home</Link>*/}
-                         {/*        </li>*/}
-                         {/*        <li>*/}
-                         {/*            <Link to="/about">About</Link>*/}
-                         {/*        </li>*/}
-                         {/*        <li>*/}
-                         {/*            <Link to="/users">Users</Link>*/}
-                         {/*        </li>*/}
-                         {/*    </ul>*/}
-                         {/*</nav>*/}
-
-                         {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
                          <Switch>
-                             {/*<Route path="/">*/}
+
+                             {/*<Route path="/registration">*/}
                              {/*    <Box/>*/}
-                             {/*</Route>*/}
-                             <Route path="/registration">
-                                 {/*<Logo/>*/}
-
-                                 <Box/>
-                                 <Push/>
-                                 {/*<Auth/>*/}
-                             </Route>
-
-                             {/*<Route path="/profile">*/}
-
-                             {/*    <Profile />*/}
+                             {/*    <Push/>*/}
                              {/*</Route>*/}
                              <Route path="/login">
                                  <Box2/>
+                                 <Push/>
                                  {/*<Login/>*/}
                              </Route>
 
                              <Route path="/forgot">
                                  <Boxforgot/>
+                                 <Push/>
                              </Route>
                               <Route path="/profile">
                                   <Boxprofile/>
+                                  <Push/>
                               </Route>
+                             <Route path="/editprofile">
+                                 <Boxeditprofile/>
+                                 <Push/>
+                             </Route>
+                             <Route path="/addphoto">
+                                 <Cropprofile/>
+                                 <Push/>
+                             </Route>
+                             <Route path="/empty">
+                                 <Form/>
+                             </Route>
+                             <Route path="">
+                                 <Box/>
+                                 <Push/>
+                             </Route>
+                             <Route path="/maps">
+                                 <MapContainer/>
+                             </Route>
+                             <Route path="/no">
+                                 <Nocoursepage/>
+                                 <Push/>
+                             </Route>
+
 
                          </Switch>
                      </div>

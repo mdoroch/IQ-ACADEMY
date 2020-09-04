@@ -1,0 +1,36 @@
+.Back {
+ position: absolute;
+ width: 1440px;
+ height: 1024px;
+ background: rgba(34, 34, 34, 0.7);
+
+}
+.Input {
+ position: absolute;
+ margin-left: 567px;
+ margin-top: 250px;
+}
+.Logout {
+ position: absolute;
+ margin-left: 22px;
+ margin-top: 976px;
+ /*z-index: 0;*/
+
+}
+.Text {
+ position: absolute;
+ width: 94px;
+ height: 25px;
+ left: 53px;
+ top: 977px;
+ font-family: Montserrat;
+ font-style: normal;
+ font-weight: 300;
+ font-size: 18px;
+ line-height: 22px;
+ display: flex;
+ align-items: center;
+ /*z-index: 0;*/
+
+ color: #E1D3C1;
+}

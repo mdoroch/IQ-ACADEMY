@@ -1,4 +1,5 @@
 .Login1 {
+
     justify-content: center;
     width: 92%;
     margin-left: 4%;
@@ -21,6 +22,7 @@
     color: #E1D3C1;
 }
 .Login2 {
+
     justify-content: center;
     width: 92%;
     margin-left: 4%;
@@ -38,25 +40,22 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 22px;
-    display: flex;
-    align-items: center;
     color: #E1D3C1;
 }
 
 .Inputs1 {
+
     margin-top: 7%;
     /*margin-bottom: 32px;*/
 
 }
 
 .Button2 {
+
     width: 80%;
     margin-left: 10%;
     margin-top: 7.5%;
-    /*margin-right: 10%;*/
     height: 70px;
-    /*margin-top: 32px;*/
-    /*margin-bottom: 87px;*/
     background: #4F3F84;
     border: none;
     border-radius: 15px;
@@ -66,20 +65,24 @@
     font-weight: 300;
     font-size: 20px;
     line-height: 24px;
-
-    /*display: f;lex*/
     align-items: center;
     text-align: center;
-    /*position: absolute;*/
-    /*left: 0%;*/
-    /*right: 0%;*/
-    /*top: 0%;*/
-    /*bottom: 2.78%;*/
+
 
     color: #E1D3C1;
 }
+.Button2:hover{
+
+    background: #5C34FA;
+}
+.Button2:active{
+
+    background: #504D49;
+    transition: color 5s
+}
 
 .Div1 {
+
     margin-top: 30px;
     margin-right: 20px;
     margin-left: 20px;
@@ -100,4 +103,18 @@
     /*margin-bottom: 30px;*/
     color: #E1D3C1;
 }
+.Login1:invalid {
+    border-color: red;
+    z-index: 1;
 
+}
+.Login1:valid {
+    /*border-top: cyan;*/
+}
+.Login2:invalid {
+    border-color: red;
+    z-index: 1;
+}
+.Login2:valid {
+    /*border-top: cyan;*/
+}
